@@ -1,0 +1,40 @@
+.example-card {
+    max-width: 400px;
+    margin: auto;
+    background: #000;
+    border: 5px solid #764abd;
+    border-top: 40px solid #764abd;
+  }
+  h2 {
+    text-align: center;
+    color: #fff;
+    margin-top: -52px !important;
+  }
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .pokemons-state {
+    background-color: #764abd;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin: 10px 10px;
+    padding: 0px 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 5px;
+  }
+  .block{
+    background: #414141;
+    padding: 15px 5px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .pok-block {
+    color: #764abd;
+  }
+  .list-page{
+    text-align: center;
+    margin-top: 25px;
+  }

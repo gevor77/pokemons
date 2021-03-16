@@ -1,0 +1,36 @@
+<mat-card class="example-card">
+
+  <h2>{{pokemonsDataName}}</h2>
+    <mat-card-header>
+      <img src="{{pokemonsDataSprites.back_default}}" alt="back_default">
+      <img src="{{pokemonsDataSprites.back_shiny}}" alt="back_shiny">
+    </mat-card-header>
+    
+    <mat-card-content>
+      <div class="block">
+        <p>Weigth: <span class="pok-block">{{pokemonsData.weight}}</span></p>
+        <p>Height: <span class="pok-block">{{pokemonsData.height}}</span></p>
+        <p>Base Experience: <span class="pok-block">{{pokemonsData.base_experience}}</span></p>
+        <p>Order: <span class="pok-block">{{pokemonsData.order}}</span></p>        
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <div class="block">
+          <p>
+            Stats:
+            <span class="pokemons-state" *ngFor="let st of pokemonsDataState">
+              {{st.stat.name}}
+            </span>
+        </p>
+        <p>
+          Types: 
+          <span class="pokemons-state" *ngFor="let ty of pokemonsDataType">
+            {{ty.type.name}}
+          </span>
+        </p>
+        </div>
+    </mat-card-actions>
+  </mat-card>
+  <div class="list-page">
+    <button mat-raised-button color="primary" [routerLink]="['/list']">List</button>
+  </div>

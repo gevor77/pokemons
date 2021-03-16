@@ -1,0 +1,20 @@
+table {
+    width: 100%;
+}
+.list td{
+    background: #551c63;
+    width: 30%;
+    border-radius: 5px;
+    margin: 5px auto;
+    padding: 5px 5px;
+}
+.list a {
+    color: #fff;
+    font-size: 18px;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: block;
+}
+.pokemons-list{
+    text-align: center;
+}

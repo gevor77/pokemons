@@ -1,0 +1,33 @@
+<h2 class="pokemons-list">Pokemons List</h2>
+<mat-card class="example-card">
+  <!-- <mat-card-header>
+    <form [formGroup]="options">
+      <mat-form-field appearance="fill">
+        <mat-label>Choose an option</mat-label>
+        <mat-select [formControl]="name">
+          <mat-option *ngFor="let res of result" value="{{res.name}}">
+            {{res.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="changeHref(name)">Search by type</button>
+    </form>
+  </mat-card-header> -->
+
+  <mat-card-actions>
+
+    <table mat-table class="list" [dataSource]="dataSource">
+
+      <ng-container matColumnDef="name">
+        <td mat-cell *matCellDef="let element">
+          <a routerLink="/list/{{ element.url.substring(element.url.indexOf('/pokemon/') + 9) }}">{{element.name}}</a> 
+          
+         </td>
+      </ng-container>
+  
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </mat-card-actions>
+</mat-card>
